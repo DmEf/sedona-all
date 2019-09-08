@@ -1,0 +1,142 @@
+/*стили меню*/
+@media @mobile-widths-only {
+.main-nav {
+	position: relative;
+	display: none;
+	width: 100%;
+	min-height: 50px;
+	background-color: #81b3d2;
+	&--open {
+		display: block;
+		/*animation-name: menu;
+		animation-duration: 0.5s;*/
+	}
+	&__menu-btn {
+		position: absolute;
+		top: 17px;
+		right: 20px;
+	}
+}
+.main-nav__items {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.main-nav__item {
+	border-bottom: 1px solid #678fa8;
+	border-top: 1px solid #9ac2db;
+	&:first-child {
+		border-top: none;
+	};
+	&:last-child {
+		border-bottom: none;
+	};
+}
+.main-nav__link {
+		display: block;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 18px;
+		line-height: 40px;
+		text-transform: uppercase;
+		font-weight: 700;
+		
+		color: #ffffff;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			background-color: #669ec0;
+		}
+		&:active {
+			background-color: #5496bd;
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+@keyframes menu {
+	from {
+		transform: translateX(160px);
+	}
+}
+/*кнопка меню для закрытия*/
+.main-nav__toggle {
+	display: block;
+	font-size: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+
+	&--close {
+		width: 23px;
+	  	height: 22px;
+	 	background: url("../img/icon-cross.png") no-repeat center;
+	}
+
+}
+}
+
+@media @tablet-widths {
+	.main-nav {
+		width: 100%;
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		&__item {
+			flex-basis: 20%;
+			&:nth-child(4n + 2) {
+				margin-right: 75px;
+			}
+			&:nth-child(4n + 3) {
+				margin-left: 75px;
+			}
+
+		}
+		&__link {
+			display: block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			font-size: 14px;
+			line-height: 26px;
+			font-weight: 700;
+			color: #000000;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover {
+				color: #81b3d2;
+			}
+			&:active {
+				color: rgba(0, 0, 0, 0.3);
+			}
+			&--active {
+				color: #766357;
+				&:hover {
+					color: #604e43;
+				}
+				&:active {
+					color: rgba(118,99,87,0.3);
+				}
+			}
+		}
+	}
+	/*кнопка закрыть меню 768*/
+	.main-nav__toggle {
+	display: none;
+}
+}
+/*Закончил на стилизации меню в 768+*/
+.main-nav__item-logo a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 0px;
+	line-height: 0px;
+	background-color: none;
+
+}
+
+

@@ -1,0 +1,98 @@
+.block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 300px;
+	background-color: grey;
+
+	&__inner {
+		width: 150px;
+		height: 250px;
+		background-color: #2600ff;
+		@media (min-width: 760px) {
+			background-color: red;
+		}
+		@media (min-width: 900px) {
+			background-color: green;
+		}
+	}
+}
+.page-header {
+	/*background-color: rgba(245, 66, 66, 0.3);*/
+	&__wrapper {
+		min-width: 320px;
+		max-width: 768px;
+		margin: 0 auto;
+		max-width: 1200px;
+		box-shadow: 0px 0 15px -7px #000000;
+		/*@media @tablet-widths {
+			max-width: 960px;
+		}*/
+	}
+	&__top-block {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #ffffff;
+
+	}
+	&__container {
+		display: flex;
+		position: relative;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		min-height: 56px;
+		padding: 0 20px;
+		@media @tablet-widths {
+			position: static;
+			min-height: 0;
+		}
+	}
+	&__logo {
+		position: absolute;
+		top: 0px;
+		left: 50%;
+
+		margin-left: -51px;
+		line-height: 0;
+		@media (min-width: 960px) {
+			margin-left: -84px;
+		}
+	}
+	&__menu-btn {
+		margin-left: auto;
+	}
+}
+										/*кнопка меню*/
+
+.page-header__toggle {
+	display: block;
+	font-size: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	
+	.padding() {
+		padding-top: 17px;
+		padding-bottom: 18px;
+
+	}
+
+	&--open {
+	  	width: 23px;
+	  	height: 21px;
+	  	.padding;
+	 	background: url("../img/icon-menu.png") no-repeat center;
+	}
+	&--close {
+		width: 23px;
+	  	height: 22px;
+	 	background: url("../img/icon-cross.png");
+	 	background-color: red;
+	}
+	@media @tablet-widths {
+		display: none;
+	}
+}
