@@ -320,6 +320,11 @@ img {
     margin-bottom: 52px;
   }
 }
+@media (min-width: 768px) {
+  .promo__reason {
+    display: flex;
+  }
+}
 .promo__reason-about {
   display: flex;
   flex-direction: column;
@@ -329,6 +334,12 @@ img {
   text-align: center;
   background: #81b3d2 url("../img/Shape 2 copy.svg") no-repeat top;
 }
+@media (min-width: 768px) {
+  .promo__reason-about {
+    width: 34%;
+    background: #81b3d2;
+  }
+}
 .promo__reason-about-title {
   margin: 0;
   margin-top: 79px;
@@ -337,6 +348,7 @@ img {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .promo__reason-about-text {
   margin: 0;
@@ -347,17 +359,26 @@ img {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .promo__reason-img {
   height: 260px;
   background: url("../img/fon.jpg") no-repeat center;
   background-size: auto auto;
+  line-height: 0px;
+}
+@media (min-width: 768px) {
+  .promo__reason-img {
+    width: 67%;
+  }
+}
+.promo__reason-img--№2 {
+  background: url("../img/fon-item2.jpg") no-repeat center;
 }
 .promo__advices {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
 }
 @media (min-width: 560px) {
   .promo__advices {
@@ -370,6 +391,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 280px;
+  background-color: #ffffff;
 }
 @media (min-width: 560px) {
   .promo__advice {
@@ -455,6 +477,7 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 50px;
+  padding-bottom: 40px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
