@@ -102,4 +102,114 @@
 				background-size: auto auto;
 			}
 	}
+	&__advices {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 40px;
+
+		@media (min-width: 560px) {
+			flex-direction: row;
+			flex-wrap: no-wrap;
+			align-items: stretch;
+		}
+
+	}
+	&__advice {
+		display: flex;
+		flex-direction: column;
+		width: 280px;
+
+		@media (min-width: 560px) {
+			align-items: center;
+			flex-basis: 33%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		@media @tablet-widths {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
+		&-title {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			margin-top: 36px;
+			margin-bottom: 20px;
+			padding-left: 50px;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			@media (min-width: 560px) {
+				margin-top: 160px;
+				padding-left: 0;
+				font-size: 21px;
+				
+				}
+			@media @tablet-widths {
+				font-size: 21px;
+			}
+			&:before {
+				position: absolute;
+				top: -10px;
+				left: 0;
+				content: "";
+				display: block;
+				width: 40px;
+				height: 40px;
+				@media (min-width: 560px) {
+					width: 80px;
+					height: 80px;
+					top: -100px;
+					left: 50%;
+					margin-left: -40px;
+				}
+			}
+			&--housing {
+				&:before {
+				
+				background: url("../img/icon-house.svg") no-repeat center;
+				@media (min-width: 560px) {
+					background: url("../img/icon-house-tablet.svg") no-repeat center;
+				}
+			}
+			}
+			&--present {
+				&:before {
+				
+				background: url("../img/icon-gift.svg") no-repeat center;
+				@media (min-width: 560px) {
+					background: url("../img/icon-gift-tablet.svg") no-repeat center;
+				}
+			}
+			}
+			&--food {
+				&:before {
+				
+				background: url("../img/icon-burger.svg") no-repeat center;
+				@media (min-width: 560px) {
+					background: url("../img/icon-burger-tablet.svg") no-repeat center;
+				}
+			}
+			}
+			
+		}
+		& p {
+			margin: 0;
+			padding: 0;
+			padding-left: 50px;
+			font-size: 14px;
+			line-height: 21px;
+			font-weight: 400;
+			color: #333333;
+			text-transform: uppercase;
+			@media (min-width: 560px) {
+					padding-left: 0;
+					text-align: center;
+				}
+		}
+	}
 }
