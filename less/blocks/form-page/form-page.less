@@ -199,4 +199,44 @@
 		}
 
 	}
+	&__impression {
+		display: flex;
+		flex-direction: column;
+
+		&-heading {
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-align: center;
+
+			@media @tablet-widths {
+				font-size: 21px;
+			}
+		}
+
+		&-label {
+			position: relative;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 80px;
+
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			background-color: #cccccc;
+		}
+		&-radio {
+			display: none;
+		}
+		&-radio + &-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 56px;
+			height: 56px;
+			background-color: #f2f2f2;
+			border-radius: 50%;
+		}
+	}
 }
