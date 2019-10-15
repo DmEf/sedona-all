@@ -1,0 +1,202 @@
+.form-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__wrapper {
+		min-width: 280px;
+		/*max-width: 400px;*/
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@media @tablet-widths {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+
+	&__label {
+		font-size: 14px;
+		line-height: 26px;
+		font-weight: 400;
+		color: #333333;
+		text-transform: uppercase;
+	}
+	&__input {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		padding-left: 20px;
+
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 700;
+		color: #000000;
+		text-transform: uppercase;
+
+		border: none;
+		background-color: #f2f2f2;
+
+		@media @tablet-widths {
+			font-size: 21px;
+		}
+	}
+
+
+	&__feedback {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-top: 40px;
+		padding-bottom: 25px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
+
+		@media @tablet-widths {
+			padding-top: 75px;
+			padding-bottom: 40px;
+		}
+
+		&-heading {
+			padding: 0;
+			margin: 0;
+			padding-bottom: 40px;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			@media @tablet-widths {
+				font-size: 30px;
+			}
+		}
+
+		&-text {
+			max-width: 440px;
+			padding: 0;
+			margin: 0;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			@media @tablet-widths {
+				width: 440px;
+			}
+		}
+	}
+
+	&__username {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		width: 100%;
+		box-sizing: border-box;
+
+		&-heading {
+			width: 100%;
+
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+
+			@media @tablet-widths {
+				font-size: 21px;
+			}
+		}
+
+		&-label {
+			display: flex;
+			align-items: baseline;
+
+			width: 100%;
+			padding-bottom: 20px;
+
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		&-input {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			margin-left: 20px;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			padding-left: 20px;
+
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #000000;
+
+			border: none;
+			background-color: #f2f2f2;
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		box-sizing: border-box;
+
+		&-label {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 15px;
+
+			& span {
+				display: block;
+				padding-left: 20px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&-input {
+			width: 100%;
+
+		}
+		&-tel-error {
+			padding: 0;
+			margin: 0;
+			padding-top: 6px;
+			padding-left: 20px;
+			font-size: 14px;
+			line-height: 26px;
+			font-weight: 400;
+			color: #ff5c5c;
+			text-transform: none;
+		}
+		&-tel,
+		&-email {
+			position: relative;
+		}
+		&-tel:before,
+		&-email:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			width: 58px;
+			height: 100%;
+		}
+		&-tel:before {
+			background: #e6e6e6 url("../img/phone.svg") no-repeat center;
+		}
+		&-email:before {
+			background: #e6e6e6 url("../img/mail.svg") no-repeat center;
+		}
+
+	}
+}
