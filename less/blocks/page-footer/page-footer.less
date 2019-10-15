@@ -1,0 +1,126 @@
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 320px;
+	margin: 0 auto;
+	max-width: 1200px;
+	box-shadow: 0px 0 15px -7px #000000;
+
+	@media @tablet-widths {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding-top: 36px;
+		padding-bottom: 36px;
+	}
+}
+.hashtag {
+	width: 196px;
+	margin: 0;
+	padding: 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	text-align: center;
+
+	@media @tablet-widths {
+		margin: 0;
+	}
+	@media @desktop-widths {
+    	width: 400px;
+  	}
+}
+.social {
+	display: flex;
+	justify-content: center;
+	width: 196px;
+	margin-bottom: 40px;
+	
+	@media @tablet-widths {
+		margin: 0;
+	}
+	@media @desktop-widths {
+    	width: 400px;
+  	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		margin-left: 3px;
+		margin-right: 3px;
+		background-color: #81b3d2;
+		&:hover {
+			background-color: #669ec0;
+		}
+		&:active {
+			background-color: #5496bd;
+		}
+		&:active span {
+			opacity: 0.3;
+		}
+		& span {
+			display: block;
+		}
+		&-twit {
+			background-image: url("../img/icon-twitter.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&-face {
+			background-image: url("../img/icon-facebook.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&-youtube {
+			background-image: url("../img/icon-youtube.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+.developer {
+	display: flex;
+	justify-content: center;
+	width: 196px;
+	margin-bottom: 23px;
+
+	@media @tablet-widths {
+		margin: 0;
+	}
+	@media @desktop-widths {
+    	width: 400px;
+    	justify-content: flex-end;
+    	padding-right: 45px;
+  	}
+
+	&__text {
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		line-height: 26px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__logo {
+		margin-left: 10px;
+
+		& .hover {
+			display: none;
+			line-height: 0;
+		}
+		&:hover .static {
+			display: none;
+		}
+		&:hover .hover {
+			display: block
+		}
+	}
+}
