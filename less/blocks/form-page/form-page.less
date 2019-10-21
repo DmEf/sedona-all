@@ -3,6 +3,12 @@
 	flex-direction: column;
 	align-items: center;
 
+	@media @tablet-widths {
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: stretch;
+	}
+
 	&__wrapper {
 		min-width: 280px;
 		/*max-width: 400px;*/
@@ -12,6 +18,13 @@
 		@media @tablet-widths {
 			padding-left: 60px;
 			padding-right: 60px;
+		}
+	}
+	&__item-border {
+		border-bottom: #e5e5e5;
+
+		@media @tablet-widths {
+			border-bottom: none;
 		}
 	}
 
@@ -50,6 +63,7 @@
 		flex-direction: column;
 		align-items: center;
 
+		flex-basis: 100%;
 		padding-top: 40px;
 		padding-bottom: 25px;
 		padding-left: 20px;
@@ -57,6 +71,7 @@
 		text-align: center;
 
 		@media @tablet-widths {
+			order: 1;
 			padding-top: 75px;
 			padding-bottom: 40px;
 		}
@@ -96,10 +111,33 @@
 		align-items: flex-start;
 
 		width: 100%;
+		max-width: 440px;
+		padding-top: 20px;
 		box-sizing: border-box;
+
+		@media @tablet-widths {
+			width: 300px;
+			order: 4;
+			padding-top: 40px;
+			margin-left: auto;
+
+		}
+
+		&--padding {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media @tablet-widths {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 
 		&-heading {
 			width: 100%;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 20px;
 
 			font-size: 18px;
 			line-height: 26px;
@@ -108,7 +146,9 @@
 			text-transform: uppercase;
 
 			@media @tablet-widths {
+				margin-bottom: 60px;
 				font-size: 21px;
+				text-align: left;
 			}
 		}
 
@@ -126,6 +166,7 @@
 		}
 		&-input {
 			width: 100%;
+			min-width: 0px;
 			padding: 0;
 			margin: 0;
 			margin-left: 20px;
@@ -148,7 +189,59 @@
 		flex-direction: column;
 
 		width: 100%;
+		padding-top: 20px;
+		max-width: 648px;
+		margin-left: auto;
+		margin-right: auto;
+
 		box-sizing: border-box;
+
+		@media @tablet-widths {
+			order: 5;
+			padding-top: 50px;
+		}
+
+		&-heading {
+
+			& span {
+				@media @tablet-widths {
+				background-color: #ffffff;
+				padding-left: 60px;
+				padding-right: 60px;
+				}
+			}
+
+			position: relative;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 25px;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+
+			&:before {
+
+				@media @tablet-widths {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+
+				width: 100%;
+				height: 1px;
+				margin-top: -1px;
+				background-color: #dbdbdb;
+				z-index: -1;
+				}
+			}
+
+			@media @tablet-widths {
+				margin-bottom: 30px;
+				font-size: 21px;
+			}
+		}
 
 		&-label {
 			display: flex;
@@ -198,5 +291,108 @@
 			background: #e6e6e6 url("../img/mail.svg") no-repeat center;
 		}
 
+	}
+
+	&__impression {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		max-width: 324px;
+		padding-top: 20px;
+
+		@media @tablet-widths {
+			width: 300px;
+			order: 2;
+			padding-top: 40px;
+			margin-right: auto;
+		}
+
+		&-heading {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 20px;
+			
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			text-align: center;
+			text-transform: uppercase;
+
+
+			@media @tablet-widths {
+				margin-bottom: 60px;
+				font-size: 21px;
+				text-align: left;
+			}
+		}
+
+		&-label {
+			position: relative;
+			margin-bottom: 10px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 80px;
+
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			/*background-color: #cccccc;*/
+
+			@media @tablet-widths {
+				margin-bottom: 20px;
+			}
+
+		}
+
+		&-radio {
+			display: none;
+		}
+		&-radio + &-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 56px;
+			height: 56px;
+			background-color: #f2f2f2;
+			border-radius: 50%;
+		}
+		&-radio:checked + &-indicator:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 22px;
+			height: 22px;
+			margin-top: -11px;
+			margin-left: -11px;
+			border-radius: 50%;
+			background-color: #333333;
+		}
+		&-label:hover &-indicator {
+			background-color: #e5e5e5;
+		}
+		&-label:active &-indicator {
+			background-color: #d5d5d5;
+		}
+		&-label:active &-indicator:before {
+			background-color: #a4a4a4;
+		}
+	}
+	&__vertical-line {
+		display: none;
+		margin-top: 26px;
+		margin-bottom: 6px;
+		width: 2px;
+		
+		background-color: #dbdbdb;
+
+		@media @tablet-widths {
+			display: block;
+			order: 3;
+			margin-top: 46px;
+		}
 	}
 }
