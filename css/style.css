@@ -1175,3 +1175,59 @@ img {
     margin-top: 46px;
   }
 }
+.form-page__visited {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-page__visited-heading {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .form-page__visited-heading span {
+    background-color: #ffffff;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .form-page__visited-heading:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    margin-top: -1px;
+    background-color: #dbdbdb;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) {
+  .form-page__visited-heading {
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
+}
+.form-page__visited-label {
+  position: relative;
+}
+.form-page__visited-checkbox {
+  display: none;
+}
+.form-page__visited-checkbox + .form-page__visited-indicator {
+  position: absolute;
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
